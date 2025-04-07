@@ -9,7 +9,7 @@ let app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: ["https://busbooking-eta.vercel.app"],
+    origin: ["https://busbooking-57jj.onrender.com"],
     credentials: true
 }));
 app.use(cookieparser());
