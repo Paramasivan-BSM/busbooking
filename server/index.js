@@ -8,10 +8,14 @@ const busrouter = require("./module/bus.module");
 let app = express()
 
 app.use(express.json())
-app.use(cors({
-    origin: "http://localhost:5173/", // dynamically reflects the request origin
-    credentials: true
-}));
+
+app.use(
+    cors({
+      origin: "http://localhost:5173", // No trailing slash!
+      credentials: true,
+    })
+  );
+  
 
 app.use(cookieparser());
 
