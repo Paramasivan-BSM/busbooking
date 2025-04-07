@@ -18,7 +18,7 @@ import { apiendpoint } from "../Data";
             
             set(({busInfo:res.data}));
 
-            // console.log({busInfo:res.data});
+            console.log({busInfo:res.data});
             
             
             

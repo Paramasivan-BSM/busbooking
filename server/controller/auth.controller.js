@@ -88,13 +88,22 @@ module.exports = {
 
             // set JWT in HTTP-only cookie
 
+            // res.cookie("authtoken", token, {
+            //     httpOnly: true,
+            //     secure: process.env.NODE_ENV === "production",
+            //     sameSite: "Strict",
+            //     maxAge: 5 * 60 * 60 * 1000  // 5 hours
+
+            // });
+
+
             res.cookie("authtoken", token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === "production",
-                sameSite: "Strict",
-                maxAge: 5 * 60 * 60 * 1000  // 5 hours
-
+                secure: true,
+                sameSite: "None",
+                maxAge: 5 * 60 * 60 * 1000
             });
+            
             
             return res.json({
                 status:true,
