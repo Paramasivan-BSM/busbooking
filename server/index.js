@@ -9,7 +9,7 @@ let app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: true, // dynamically reflects the request origin
+    origin: "http://localhost:5173/", // dynamically reflects the request origin
     credentials: true
 }));
 
