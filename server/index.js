@@ -10,9 +10,9 @@ let app = express()
 app.use(express.json())
 
 const allowedOrigins = [
-    "http://localhost:5173",
+    "https://busbuddy-alpha.vercel.app",
     "https://busbooking-57jj.onrender.com",
-    "https://busbuddy-alpha.vercel.app/"
+    
   ];
   
   app.use(
