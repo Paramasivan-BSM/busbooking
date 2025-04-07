@@ -9,12 +9,18 @@ let app = express()
 
 app.use(express.json())
 
-app.use(
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://busbooking-57jj.onrender.com"
+  ];
+  
+  app.use(
     cors({
-      origin: "http://localhost:5173/", // No trailing slash!
+      origin: allowedOrigins,
       credentials: true,
     })
   );
+  
   
 
 app.use(cookieparser());
