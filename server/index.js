@@ -9,7 +9,7 @@ let app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: ["https://busbooking-57jj.onrender.com", "http://localhost:5173"],
+    origin: true, // dynamically reflects the request origin
     credentials: true
 }));
 
